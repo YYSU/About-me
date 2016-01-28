@@ -1,0 +1,106 @@
+html,
+body{
+	height: 100%;
+	width: 100%;
+}
+img {
+	max-width: 100%;
+}
+.nav > li{
+    float:none !important;
+    display:inline-block !important;
+}
+
+.nav {
+    text-align:center !important;
+}
+
+#profile {
+	background :#222 url('img/stage.jpg') center center no-repeat;
+	background-size:250%;
+	height:100%;
+	color: white;
+	text-align: center;
+	/* bootstrap 4 */
+	display:flex;
+	align-items:center;
+}
+#section-content {
+	width:100%;
+}
+
+.fon{
+	font-size:72px ;
+	font-family:Arial;
+}
+
+.subfon{
+	font-size: 60px;
+}
+
+.footer-main{
+	background: #222;
+	color:white;
+	font-size: 0.8rem;
+	padding:2.5rem 0;
+}
+
+.cen>img{
+	width:185px;
+	height:185px;
+	border:solid 5px #222;
+	
+	margin:0px auto;
+	vertical-align : middle;
+	display:block; 
+}
+
+#Centerh1{
+	text-align: center;
+	
+}
+#Introduction{
+	padding:120px ;
+	height:100%;
+}
+#line{
+	background-color: #275;
+	width:130px;
+	height:2px;
+	margin: 50px auto;
+	
+}
+#Skills{
+	width:100%;
+	background-color: #f2f2f2;
+	text-align: center;
+	padding:50px;
+}
+.card-header{
+	color:white;
+}
+ul{
+	list-style-type:none;
+}
+.program{
+	text-align: left;
+	font-size: 2rem;
+}
+@media screen and (max-width: 768px) {
+    h1{
+        font-size:20px;
+    }
+}
+#Contact{
+	padding:10%;
+	height:80%;
+	background: #222 url('img/banjo.jpg') center center no-repeat;
+}
+.about-text {
+	background: rgba(0,0,0,0.8);
+	color:white;
+	padding:1.875rem;
+}
+.myself{
+	line-height:30px;
+}
