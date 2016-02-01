@@ -61,7 +61,7 @@ img {
 	
 }
 #Introduction{
-	padding:120px ;
+	padding:80px ;
 	height:100%;
 }
 #line{
@@ -93,7 +93,7 @@ ul{
     }
 }
 #Contact{
-	padding:10%;
+	padding:80px;
 	height:80%;
 	background: #222 url('img/banjo.jpg') center center no-repeat;
 }
@@ -104,4 +104,8 @@ ul{
 }
 .myself{
 	line-height:30px;
+}
+.tables{
+	padding:50px;
+
 }
