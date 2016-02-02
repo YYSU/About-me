@@ -61,8 +61,8 @@ img {
 	
 }
 #Introduction{
-	padding:80px ;
-	height:100%;
+	padding-top:80px ;
+	
 }
 #line{
 	background-color: #275;
@@ -106,6 +106,6 @@ ul{
 	line-height:30px;
 }
 .tables{
-	padding:50px;
-
+	padding:30px;
+	padding-bottom:50px;
 }
