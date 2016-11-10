@@ -12,8 +12,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
     <!-- Customize css -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -82,7 +81,7 @@
                     <img class="img-fluid" src="me.PNG" alt="Me">
                 </div>
                 <div class="col-md-9">
-                	
+
                     <h2 class="me"><span class="font-weight-bold">蘇彥昀</span> (<span class="font-weight-bold">Y</span>an <span class="font-weight-bold">Y</span>un <span class="font-weight-bold">SU</span>)</h2>
                     <ul class="myself">
                     	<li><strong>年齡:</strong>熱血青年</li>
@@ -121,14 +120,14 @@
 
     <section id="Skills">
         <div class="container">
-            
+
             <h1 id="Centerh1">Skills</h1>
             <div id="line"></div>
             <div class="row">
-            
+
                 <div class="col-sm-12 ">
                     <div class="card-columns">
-                        
+
                             <div class="card">
                                 <div class="card-header card-primary ">
 								    程式語言
@@ -173,19 +172,19 @@
                                     SVN experience
                                     Github experience
                                     linux  <small class="text-muted"> ing...</small></p>
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                
+
             </div>
-            
+
         </div>
     </section>
 
     <section id="Portfolio">
-    	
+
     </section>
 
     <section id="Contact">
@@ -195,15 +194,15 @@
     			<div class="col-md-5 about-text">
 	    			<h3>Contact me</h3>
 	    			<Form class="form-horizontal" Method="post" Action="MailTo:jim123820@gmail.com" Enctype="Text/Plain" role="form">
-	    				<div class="form-group"> 
+	    				<div class="form-group">
 	    					<label for="Email">Your email</label>
 							<input type="email" name="email" class="form-control" Size="25" MaxLength="50">
 						</div>
-						<div class="form-group"> 
+						<div class="form-group">
 							<label for="content">Talk to me</label>
 							<textarea Name="content" class="form-control" row="3"></textarea>
 						</div>
-						<div class="form-group"> 
+						<div class="form-group">
 							<input type="submit" value="Send"  class="btn btn-info">
 							<input type="reset" value="reset"  class="btn btn-secondary btn-sm" style="float:right;">
 						</div>
@@ -214,12 +213,14 @@
     </section>
 
     <footer class="footer-main">
-        
+
                 	coded by <a href="#profile">YYSU</a> , 2016
-    
+
     </footer>
     <!-- icon resource: https://www.iconfinder.com/iconsets/iconza-circle-social 	-->
     <!-- Reference from http://authenticgoods.co/wrapbootstrap/themes/articulate-v1.2/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -228,6 +229,32 @@
 
 	  ga('create', 'UA-74455325-1', 'auto');
 	  ga('send', 'pageview');
+      $(document).ready(function () {
+        $('img').hide(); //先把所有圖片先隱藏
+        var ImgCount = $('img').length; //取得圖片的個數
+        $('img').each(function () {
+            var str = GetRumdomStr(); //請忽略,讓圖片加隨機亂數,視為模擬未曾下載過的圖片
+            var url = $(this).attr("src");
+            $(this).attr("src", url + "?" + str);
+
+            function ImageLoading() {
+                msg = "Image ID : " + this.id + "....done";
+                console.log(msg);
+                $('#msg').append("<div>" + msg + "</div>");
+                $(this).fadeIn(2000);
+                ImgCount--;
+                if (ImgCount === 0) {
+                    console.log("All images Loaded..");
+                }
+            }
+
+            if ($(this).complete) {
+                imageLoaded.call(this);
+            } else {
+                $(this).one('load', ImageLoading);
+            }
+        });
+    });
 
 	</script>
 </body>
