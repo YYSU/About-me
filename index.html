@@ -49,15 +49,16 @@
     <section id="profile">
         <div id="section-content">
             <div class="container">
-                <br/>
-                <br/>
-                <br/>
-                <div class="col-sm-10 col-sm-offset-1">
-                    <span class="fon">YYSU</span>
-                    <br/>
-                    <br/>
-                    <p class="subfon">College Student in NCNU</p>
-                    <h3>Major in Department of Information Management </h3>
+                <div class="row"><div class="col-sm-12"></div></div>
+                <div class="row"></div>
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <span class="fon">YYSU</span>
+                        <br/>
+                        <br/>
+                        <p class="subfon">College Student in NCNU</p>
+                        <h3>Major in Department of Information Management </h3>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1" style="padding:50px">
@@ -67,9 +68,10 @@
                         <a href="https://github.com/YYSU"><img src="img/icon_github.png" alt="github" width="60px"></a>
                     </div>
                 </div>
+                <br/><br/><br/><br/>
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1" style="padding-top:20px">
-                        <a href="#Contact" class="btn btn-info-outline">Hire me <i class="fa fa-envelope"></i></a>
+                        <a href="#Contact" class="btn btn-success-outline">Hire me <i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -239,7 +241,8 @@
 
 	  ga('create', 'UA-74455325-1', 'auto');
 	  ga('send', 'pageview');
-      GetRumdomStr = function () {
+      
+      var GetRumdomStr = function () {
         var str = "";
         var maxNum = 10;
         var minNum = 0;
@@ -249,7 +252,7 @@
             str += n.toString();
         }
         return str;
-    };
+      };
       $(document).ready(function () {
         $('img').hide(); //先把所有圖片先隱藏
         var ImgCount = $('img').length; //取得圖片的個數

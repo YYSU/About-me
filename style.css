@@ -19,11 +19,15 @@ img {
 	background :#222 url('img/stage.jpg') center center no-repeat;
 	background-size:250%;
 	height:100%;
-	color: white;
+	color:		#fff;
 	text-align: center;
 	/* bootstrap 4 */
 	display:flex;
 	align-items:center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 #section-content {
 	width:100%;
