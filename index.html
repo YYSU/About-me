@@ -59,15 +59,18 @@
                     <p class="subfon">College Student in NCNU</p>
                     <h3>Major in Department of Information Management </h3>
                 </div>
-                <div class="col-sm-10 col-sm-offset-1" style="padding:50px">
-                    <a href="https://www.facebook.com/jim123820"><img src="img/icon_facebook.png" alt="facebook" width="60px"></a>
-                    <a href="https://www.instagram.com/yan_yun_su/"><img src="img/icon_instagram.png" alt="instagram" width="60px"></a>
-                    <a href="https://plus.google.com/u/0/102367851532573634586/posts"><img src="img/icon_google.png" alt="google+" width="60px"></a>
-                    <a href="https://github.com/YYSU"><img src="img/icon_github.png" alt="github" width="60px"></a>
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1" style="padding:50px">
+                        <a href="https://www.facebook.com/jim123820"><img src="img/icon_facebook.png" alt="facebook" width="60px"></a>
+                        <a href="https://www.instagram.com/yan_yun_su/"><img src="img/icon_instagram.png" alt="instagram" width="60px"></a>
+                        <a href="https://plus.google.com/u/0/102367851532573634586/posts"><img src="img/icon_google.png" alt="google+" width="60px"></a>
+                        <a href="https://github.com/YYSU"><img src="img/icon_github.png" alt="github" width="60px"></a>
+                    </div>
                 </div>
-                <div class="col-sm-10 col-sm-offset-1" style="padding-top:20px">
-                    <a href="#Contact" class="btn btn-info-outline">Hire me <i class="fa fa-envelope"></i>
-</a>
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1" style="padding-top:20px">
+                        <a href="#Contact" class="btn btn-info-outline">Hire me <i class="fa fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,11 +87,12 @@
 
                     <h2 class="me"><span class="font-weight-bold">蘇彥昀</span> (<span class="font-weight-bold">Y</span>an <span class="font-weight-bold">Y</span>un <span class="font-weight-bold">SU</span>)</h2>
                     <ul class="myself">
-                    	<li><strong>年齡:</strong>熱血青年</li>
-                    	<li><strong>學歷:</strong>國立暨南國際大學 資管三</li>
-                    	<li><strong>個性:</strong>勇於挑戰、喜歡學習新事物、透過創意解決問題</li>
-                    	<li><strong>興趣:</strong>跳舞、魔術、coding</li>
-						<li><strong>聯絡我:</strong>jim123820@gmail.com</li>
+                    	<li><strong>年齡 : </strong>熱血青年</li>
+                    	<li><strong>學歷 : </strong>國立暨南國際大學 資管四</li>
+                    	<li><strong>個性 : </strong>勇於挑戰、喜歡學習新事物、透過創意解決問題</li>
+                    	<li><strong>興趣 : </strong>跳舞、魔術、coding</li>
+						<li><strong>聯絡我 : </strong>jim123820@gmail.com</li>
+                        <li></li>
                     </ul>
 
                 </div>
@@ -109,6 +113,12 @@
 	                		<li>網頁維護</li>
 							<li>專案經驗</li>
 	                	</ul>
+                        <h3>2016</h3>
+                        <ul>
+	                		<li>網頁及伺服器管理員</li>
+	                		<li>程式設計、資料結構與演算法Teacher Assisant</li>
+	                		<li>研究助理</li>
+	                	</ul>
 	                </div>
 	                <div class="col-sm-6">
 	                	<!-- <h2>作品</h2> -->
@@ -126,7 +136,7 @@
             <div class="row">
 
                 <div class="col-sm-12 ">
-                    <div class="card-columns">
+                    <div class="card-group">
 
                             <div class="card">
                                 <div class="card-header card-primary ">
@@ -229,6 +239,17 @@
 
 	  ga('create', 'UA-74455325-1', 'auto');
 	  ga('send', 'pageview');
+      GetRumdomStr = function () {
+        var str = "";
+        var maxNum = 10;
+        var minNum = 0;
+        var n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+        for (var i = 1; i <= 50; i++) {
+            n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+            str += n.toString();
+        }
+        return str;
+    };
       $(document).ready(function () {
         $('img').hide(); //先把所有圖片先隱藏
         var ImgCount = $('img').length; //取得圖片的個數
